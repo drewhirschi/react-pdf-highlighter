@@ -44,16 +44,9 @@ export interface HighlightContent {
   content: Content;
 }
 
-export interface Comment {
-  text: string;
-  emoji: string;
-}
 
-export interface HighlightComment {
-  comment: Comment;
-}
 
-export interface NewHighlight extends HighlightContent, HighlightComment {
+export interface NewHighlight extends HighlightContent {
   position: ScaledPosition;
 }
 
@@ -61,7 +54,7 @@ export interface IHighlight extends NewHighlight {
   id: string;
 }
 
-export interface ViewportHighlight extends HighlightContent, HighlightComment {
+export interface ViewportHighlight extends HighlightContent {
   position: Position;
 }
 
